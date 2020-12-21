@@ -1,0 +1,339 @@
+.template-page-section
+	min-height: 100vh
+
+.template-page-content
+	padding-top: 125px
+
+.template-collapses-container
+	display: flex
+	width: 100%
+	padding-bottom: 37px
+	justify-content: center
+	+r($md-desktop)
+		flex-direction: column
+		padding-bottom: 0
+	.template-collapse-wrapper
+		overflow: hidden
+		position: relative
+		display: flex
+		flex-direction: column
+		width: 100%
+		margin-right: 28px
+		&:last-child
+			margin-right: 0
+			+r($min-desktop)
+			+r($mobileL)
+				margin-right: 0
+		.ui-accordion .ui-accordion-header
+			display: flex
+			height: 42px
+			padding: 0 14px 0 0
+			background-color: $white
+			.template-collapse__text
+				max-width: 250px
+				padding-right: 15px
+				font-family: 'Circe', sans-serif
+				color: #333
+
+				&:focus, &:hover
+					text-decoration: underline
+					outline: none
+					color: #F17757
+
+				+r($md-desktop)
+					max-width: unset
+				+r($laptop)
+					width: 80%
+				+r($mobileL)
+					width: 70%
+			.template-collapse__text-services
+				max-width: 325px
+				+r($md-desktop)
+					max-width: unset
+				+r($mobileL)
+					width: 90%
+		+r($md-desktop)
+			max-width: 100%
+			margin-right: 0
+			margin-bottom: 15px
+			&:last-child
+				margin-bottom: 0
+		.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover
+			border: none
+			color: inherit
+			background-color: $white
+
+.template-collapse
+	position: relative
+	background: #fff
+	&__title
+		line-height: 34px
+		padding-bottom: 10px
+	&__item, .ui-accordion-header
+		background: linear-gradient(to right, #F17757 0%, #F17757 0%, #F17757 75px, rgba(241, 111, 91, 0) 0%, rgba(248, 78, 48, 0) 0%, rgba(248, 78, 48, 0) 100%)
+		display: flex
+		align-items: center
+		height: 42px
+		border: none !important
+		padding-right: 50px
+		outline: none
+		+r($max-laptop)
+			background: linear-gradient(to right, #F17757 0%, #F17757 0%, #F17757 86px, rgba(241, 111, 91, 0) 0%, rgba(248, 78, 48, 0) 0%, rgba(248, 78, 48, 0) 100%)
+	&__text
+		max-width: 250px
+		overflow: hidden
+		white-space: nowrap
+		text-overflow: ellipsis
+		padding-left: 16px
+		font-family: 'Circe', sans-serif
+		text-decoration: none
+
+		&:focus, &:hover
+			text-decoration: underline
+			outline: none
+			color: $red_1
+
+		+r($md-desktop)
+			max-width: unset
+		+r($max-laptop)
+			font-size: 12px
+			font-weight: 600
+		+r($laptop)
+			width: 80%
+		+r($mobileL)
+			width: 70%
+	&__data
+		min-width: 74px
+		max-height: 42px
+		padding-left: 11px
+		padding-right: 11px
+		background-color: $red_1
+		white-space: nowrap
+		font-family: 'Circe', sans-serif
+		+r($max-laptop)
+			min-width: 85px
+			font-size: 12px
+	&__icon-button
+		position: absolute
+		top: 10px
+		right: 14px
+		display: inline-block
+		vertical-align: middle
+		min-width: 21px
+		height: 21px
+		background-color: $beige_4
+		border-radius: 50px
+		&:active, &:focus, &:hover
+			outline: none
+			background: $red_1
+			& svg path
+				fill: $white
+		&::-moz-focus-inner
+			border: 0
+		& svg
+			display: inline-block
+			vertical-align: middle
+
+	&__text_middl
+		text-decoration: underline
+
+.services-collapse
+	.template-collapse__item, .ui-accordion-header
+		background: $white
+
+.template-page-title
+	padding-top: 50px
+	padding-bottom: 50px
+	+r($mobileL)
+		padding-top: 30px
+		padding-bottom: 20px
+	.h2
+		+r($mobileL)
+			font-size: 18px
+			line-height: 22px
+		// styles for text from admins panel fields
+.template-text-container
+	padding-bottom: 40px
+	position: relative
+	+r($mobileL)
+		padding-bottom: 20px
+
+	//h1
+	//	margin: 0
+	//	padding: 30px 0 25px 0
+	//	font-size: 58px
+	//	line-height: $line-height-58
+	//	font-family: $font-family-base
+	//	font-weight: 600
+	//	color: $black
+	//	+r($mobileL)
+	//		padding: 20px 0 15px 0
+	//		font-size: 20px
+	//		line-height: 22px
+	//h2
+	//	margin: 0
+	//	padding: 30px 0 20px 0
+	//	font-size: 44px
+	//	line-height: $line-height-46
+	//	font-family: $font-family-base
+	//	font-weight: 600
+	//	color: $black
+	//	+r($mobileL)
+	//		padding: 20px 0 15px 0
+	//		font-size: 18px
+	//		line-height: 22px
+	//h3
+	//	margin: 0
+	//	padding: 50px 0 30px 0
+	//	font-size: 36px
+	//	line-height: $line-height-36
+	//	font-family: $font-family-base
+	//	font-weight: 650
+	//	color: $black
+	//	+r($mobileL)
+	//		padding: 30px 0 20px 0
+	//		font-size: 18px
+	//		line-height: 20px
+	//h4
+	//	margin: 0
+	//	padding: 30px 0 20px 0
+	//	font-size: 28px
+	//	line-height: $line-height-32
+	//	font-family: $font-family-base
+	//	font-weight: 600
+	//	color: $black
+	//	+r($mobileL)
+	//		padding: 20px 0 15px 0
+	//		font-size: 16px
+	//		line-height: 18px
+	//p, li
+		font-size: 24px
+		line-height: 34px
+		font-family: $font-family-base
+		color: $black
+		+r($mobileL)
+			font-size: 14px
+			line-height: 19px
+			font-weight: 500
+	//b, strong
+	//	font-weight: 600
+	//a
+	//	font-size: 28px
+	//	line-height: 32px
+	//	font-family: $font-family-base
+	//	color: $beige
+	//	text-decoration: underline
+	//	&:hover
+	//		color: $red_1
+	//	+r($mobileL)
+	//		font-size: 16px
+	//		line-height: 20px
+
+	//	width: 100%
+	//	height: auto
+	//	max-height: 340px
+	//	margin-top: 15px
+	//	margin-bottom: 40px
+	//	border-radius: $border-radius--main
+	//	object-fit: cover
+	//	object-position: center top
+	img
+		display: inline-block
+		max-width: 100%
+		height: auto
+
+	p
+		padding-bottom: 15px
+		+r($laptop)
+			padding-bottom: 0
+			word-break: break-word
+
+	ul
+		list-style-type: unset
+
+	ul, ol
+		padding-left: 1em
+		li
+			margin-left: 1em
+	ul
+		list-style-type: unset
+
+	ul, ol
+		padding-left: 1em
+		li
+			margin-left: 1em
+
+	iframe
+		+r($laptop)
+			width: 100%
+			height: auto
+			min-height: 303px
+			padding: 10px 0 15px
+
+	.container-video
+		position: relative
+		width: 100%
+		height: 0
+		padding-bottom: 56.25%
+
+	.video
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+
+	.documents-files
+		a
+			&:hover
+				color: #C59368
+			&:focus
+				outline: 2px solid #C59368
+
+.collapse-content
+	display: none
+
+.ui-accordion .ui-accordion-content
+	overflow-y: hidden!important
+	padding: 0 !important
+
+.ui-state-active .ui-icon, .ui-button:active .ui-icon
+	display: none
+
+.ui-icon, .ui-widget-content .ui-icon
+	display: none !important
+
+.ui-widget-content
+	border: none !important
+
+.ui-accordion .ui-accordion-header
+	margin: 0 !important
+
+.ui-accordion-header-active
+	.template-collapse__icon
+		transform: rotate(180deg)
+
+.template-page-limit-shadow
+	position: absolute
+	right: 0
+	bottom: 0
+	left: 0
+	z-index: 50
+	height: 150px
+	background: linear-gradient(to top, rgba(246,246,246,1), rgba(246,246,246,1), rgba(246,246,246,.7), rgba(246,246,246,.2))
+
+.template-page-preview-img
+	width: 100%
+	height: auto
+	max-height: 340px
+	margin-top: 15px
+	margin-bottom: 40px
+	border-radius: $border-radius--main
+	object-fit: cover
+	object-position: center center
+
+.template-page-img
+	width: 100%
+	height: auto
+	margin-top: 15px
+	margin-bottom: 40px

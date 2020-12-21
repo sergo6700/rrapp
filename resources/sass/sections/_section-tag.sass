@@ -1,0 +1,69 @@
+.section-tags
+	max-height: 120px
+	overflow: hidden
+	transition: max-height .3s ease-out
+
+	+r($mobileL)
+		max-height: 245px
+
+	&_small
+		max-height: 35px
+		+r($mobileL)
+			max-height: 120px
+
+	&__button
+		border: 1px solid #C9CCD4
+		display: none!important
+
+	.section-tags__list
+		display: flex
+		flex-wrap: wrap
+
+.hashtag-block__tag
+	text-decoration: none
+	&:hover, &:focus
+		outline: none
+		color: #F17757
+	+r($mobileL)
+		font-size: 10px
+
+.block-tag
+	display: flex
+	width: 25%
+	margin-bottom: 10px
+	word-wrap: break-word
+
+	+r($min-desktop)
+		width: 33.3%
+
+	+r($laptop)
+		width: 50%
+
+	+r($mobileL)
+		width: 100%
+		font-size: 16px
+
+	&__count
+		color: $black_4
+		margin-left: 5px
+
+	&__link
+		padding: 3px 18px
+		border: 1px solid $stroke
+		font-size: 14px
+		color: $black_1
+		border-radius: 6px
+
+
+
+.block-tag__link_active
+	color: $white
+	background-color: $beige
+	border-color: $beige
+
+	.block-tag__count
+		color: $black5
+
+		&:hover, &:focus
+			outline: none
+			color: $red_1

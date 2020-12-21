@@ -1,0 +1,109 @@
+.input
+	width: 100%
+	height: 60px
+	padding: 14px 24px
+	border: 1px solid $stroke
+	font-size: 19px
+	line-height: 23px
+	font-family: $font-family-PT
+	color: $black
+	border-radius: $border-radius--main
+	transition: border .3s
+
+	&:hover
+		border: 1px solid $beige
+
+	&_confirm
+		margin-top: 30px
+
+	+r($mobileL)
+		font-size: 16px
+		height: 48px
+
+	&::placeholder
+		font-size: inherit
+		font-family: $font-family-PT
+		color: $black
+
+		+r($mobileL)
+			font-size: 16px
+
+// for bad-visible
+.special-color-2 .input,
+.special-color-5 .input
+	&::placeholder
+		color: $white
+
+.special-color-2 .textarea,
+.special-color-5 .textarea
+	@include placeholder
+		color: $white
+// for bad-visible
+
+
+.textarea
+	width: 100%
+	height: auto
+	min-height: 110px
+	padding: 18px 24px
+
+	font-size: 19px
+	font-family: $font-family-PT
+	color: $black
+	border: 1px solid $stroke
+	border-radius: $border-radius--main
+	resize: none
+
+	transition: border .3s
+
+	&:hover
+		border: 1px solid $beige
+
+	@include placeholder
+		font-family: $font-family-PT
+		font-size: inherit
+		color: $black
+
+	&_service
+		margin-bottom: 31px
+
+		.textarea
+			margin-bottom: 0
+			min-height: 111px
+			height: auto
+			padding-top: 18px
+			padding-right: 24px
+			padding-bottom: 14px
+			padding-left: 24px
+
+	+r($mobileL)
+		margin-bottom: 27px
+
+		.textarea
+			padding-top: 16px
+			padding-right: 30px
+			padding-left: 18px
+			padding-bottom: 16px
+
+	+r($mobileL)
+		font-size: 16px
+
+	&_popup
+		+r($mobileL)
+			margin-bottom: 0
+
+.input.error, .textarea.error
+	border: 1px solid $red
+
+	& + label.error
+		font-size: 14px
+		line-height: 16px
+		font-family: $font-family-base
+		color: $red
+
+.recaptcha
+	& + label.error
+	font-size: 14px
+	line-height: 16px
+	font-family: $font-family-base
+	color: $red

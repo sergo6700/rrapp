@@ -1,0 +1,98 @@
+.content-service
+	align-items: flex-start
+
+.title-service
+	width: 100%
+	max-width: 850px
+
+.buttons-service
+	+r($mobileL)
+		flex-grow: 1
+
+.service-content
+	display: flex
+	justify-content: space-between
+	align-items: flex-start
+	padding-top: 20px
+
+	+r($min-desktop)
+		flex-direction: column
+
+.service-form-block
+	width: 100%
+	max-width: 457px
+	padding-top: 55px
+	padding-right: 41px
+	padding-left: 41px
+	padding-bottom: 55px
+	margin-right: 0
+	margin-bottom: 0
+
+	+r($min-desktop)
+		max-width: 100%
+
+	+r($mobileL)
+		padding-top: 35px
+		padding-right: 25px
+		padding-left: 25px
+		padding-bottom: 55px
+
+		.button
+			display: block
+
+	&__text
+		margin-left: 10px
+
+.service-content__title
+	+r($mobileL)
+		font-size: 14px
+		line-height: $line-height-16
+
+.service-content__text
+	+r($mobileL)
+		display: block
+		margin-left: 0
+
+.content-info__description
+	max-width: 556px
+	width: 100%
+
+	+r($min-desktop)
+		max-width: 100%
+
+	+r($mobileL)
+		padding-bottom: 20px
+
+	p
+		margin-top: 20px
+
+.service-form
+	display: flex
+	flex-direction: column
+
+	&__title
+		margin-bottom: 54px
+
+		+r($mobileL)
+			margin-bottom: 30px
+			font-size: 16px
+			line-height: $line-height-18
+
+
+		// style recaptcha
+.recaptcha
+	margin-bottom: 8px
+	& + label.error
+		font-size: 14px
+		line-height: 16px
+		font-family: $font-family-base
+		color: $red
+
+.recaptcha, .recaptcha div
+	max-width: 100%
+
+.recaptcha iframe, body > div[style]:last-of-type
+	+r($mobileL)
+		transform: scale(0.75)
+		transform-origin: 0 0
+		z-index: 10000!important

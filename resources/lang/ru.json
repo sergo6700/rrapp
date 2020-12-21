@@ -1,0 +1,15 @@
+{
+	"Reset password": "Сброс пароля",
+	"Reset password success": "Пароль успешно сброшен. Пожалуйста обновите страницу",
+	"Reset password error": "Ошибка при сбросе пароля. Повторите попытку",
+	"Regards": "С уважением",
+	"Before proceeding, please check your email for a verification link.": "Прежде чем продолжить, проверьте свою электронную почту на наличие ссылки для подтверждения.",
+	"If you did not receive the email": "Если вы не получили емайл",
+	"click here to request another": "нажмите здесь, чтобы запросить другой",
+	"Verify Your Email Address": "Проверьте свой адрес электронной почты",
+	"Verify Email Address": "Подтвердите адрес электронной почты",
+	"Hello!": "Здравствуйте!",
+	"Please click the button below to verify your email address.": "Пожалуйста, нажмите кнопку ниже, чтобы подтвердить свой адрес электронной почты.",
+	"If you did not create an account, no further action is required.": "Если вы не создавали учетную запись, никаких дальнейших действий не требуется.",
+	"A fresh verification link has been sent to your email address.": "На ваш адрес емайл отправлена новая ссылка для подтверждения."
+}

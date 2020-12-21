@@ -1,0 +1,357 @@
+.button
+	outline: none
+	display: inline-block
+	text-align: center
+	+r($mobileL)
+		.text
+			font-size: 12px
+			line-height: $line-height-12
+
+	&_rounded
+		border-radius: $border-radius--main
+	&_big
+		padding: 16px 10px 14px 10px
+		+r($mobileL)
+			padding: 10px 26px 9px 26px
+			border-radius: 3px
+			font-family: $font-family-PT
+	&_big .text
+		+r($mobileL)
+			font-size: 14px
+			font-weight: 550
+	&_small
+		padding: 14px 10px 12px 10px
+		+r($mobileL)
+			padding: 10px 26px 9px 26px
+			border-radius: 3px
+	&_mobile
+		display: none
+		width: 100%
+		padding: 10px 26px 9px 26px
+		border-radius: 3px
+		+r($md-desktop)
+			display: block
+			text-decoration: none
+
+	&_white
+		background-color: $white
+		transition: background-color .3s
+		&:hover
+			background-color: $white_f6
+		&:focus
+			background-color: $stroke
+		.text
+			color: $black
+	&_transparent
+		background-color: $tr
+		border: 1px solid $stroke
+		transition: background-color .3s
+		&:hover
+			background-color: $white
+			border-color: $white_f6
+			.text
+				color: $black
+		&:focus
+			background-color: $stroke
+			border-color: $stroke
+			.text
+				color: $black
+		.text
+			color: $white
+			transition: color .3s
+	&_transparent_contrast
+		background-color: $tr
+		border: 1px solid $stroke
+		transition: background-color .3s
+		&:hover
+			background-color: $black5
+			border-color: $black5
+		&:focus
+			background-color: $black_4
+			border-color: $black_4
+		.text
+			color: $black
+			transition: color .3s
+	&_red_1
+		text-align: center
+		background-color: $red_1
+		transition: background-color .3s
+		.text
+			color: $white
+			transition: color .3s
+	&_disabled-red
+		background-color: $red_1
+		.text
+			color: $white
+	&_login
+		min-width: 125px
+		+r($md-desktop)
+			display: none
+	&_spiker
+		max-width: 295px
+		width: 100%
+		+r($laptop)
+			max-width: 100%
+	&_brown
+		background-color: $beige
+		transition: background-color .3s
+		&:hover
+			background-color: $brown_2
+			.text
+				color: $white_f6
+		&:focus
+			background-color: $brown_1
+			.text
+				color: $white_f6
+		.text
+			color: $white
+			transition: color .3s
+
+	&_grey-border
+		border: 1px solid $stroke
+		&:hover
+			border-color: $white_f6
+		&:focus
+			border-color: $stroke
+	&_grey-border-tr
+		border: 1px solid $stroke
+		&:hover
+			background-color: $black5
+		&:focus, &.active
+			background-color: $black_4
+
+			.text
+				color: $white
+			.svg-filter path
+				fill: $white
+	&_filter
+		display: flex
+		min-width: 172px
+		padding: 14px 40px 12px 32px
+		.svg-filter
+			fill: $black
+			margin-right: 10px
+		+r($mobileL)
+			padding: 12px 14px 12px 14px
+			min-width: 91px
+	&_filter .svg-filter
+		+r($mobileL)
+			width: 13px
+			height: 13px
+	&_close-tag
+		margin-left: 10px
+	&_visible-icon
+		width: 32px
+		height: 22px
+		&:hover
+			svg
+				color: $red_1
+		svg
+			color: $white_fa
+			transition: color 0.3s
+		+r($md-desktop)
+			display: none
+	&_download
+		width: 19px
+		height: 22px
+		&:hover
+			svg
+				color: $red_1
+		svg
+			color: $brown_2
+			transition: color 0.3s
+	&_visible-icon-brown svg
+		color: $brown_2
+	&_close
+		position: absolute
+		top: 20px
+		right: 20px
+		width: 14px
+		height: 14px
+	&_close-mobile
+		position: relative
+		display: flex
+		width: 24px
+		height: 24px
+		justify-content: center
+		align-items: center
+		align-self: flex-end
+	&_close-mobile-line
+		width: 20px
+		height: 3px
+		background-color: $black
+		&:first-child
+			transform: rotate(-45deg)
+		&:last-child
+			position: absolute
+			right: 2px
+			transform: rotate(45deg)
+	&_big-filter-button
+		min-width: 274px
+	&_filter-mobile
+		display: none
+		width: 100%
+		+r($mobileL)
+			padding: 10px 26px 9px 26px
+			border-radius: 3px
+			display: block
+	&_eye
+		position: absolute
+		top: 22px
+		right: 22px
+		width: 22px
+		height: 16px
+		+r($mobileL)
+			top: 17px
+		.icon-eye_close
+			display: none
+		.icon-eye-password_close
+			display: none
+	&_service
+		margin-top: 45px
+		+r($mobileL)
+			margin-top: 44px
+			padding-top: 16px
+			padding-bottom: 16px
+
+	&_service .text
+		+r($mobileL)
+			font-size: 23px
+
+	&_cancel-activity
+		margin-top: 55px
+
+	&_save-notifications
+		min-width: 264px
+
+	&_save-personal-info
+		max-width: 264px
+
+		+r($mobileL)
+			max-width: 100%
+			width: auto
+	&-tag
+		padding-top: 14px
+		padding-right: 31px
+		padding-bottom: 12px
+		padding-left: 40px
+		+r($mobileL)
+			padding-top: 10px
+			padding-right: 15px
+			padding-bottom: 10px
+			padding-left: 23px
+		&_service
+			+r($max-desktop)
+				margin-top: 15px
+			+r($mobileL)
+				margin-top: 0px
+				width: 100%
+		&:focus
+			background-color: #D1D3D4
+			.text
+				color: $black
+		&__icon
+			margin-left: 28px
+			+r($laptop)
+				width: 9px
+				height: 6px
+				margin-left: 10px
+			&_open
+				transform: rotate(180deg)
+
+	&_socials
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 103px
+		min-width: 103px
+		height: 41px
+		border-radius: 3px
+
+		+r($mobileL)
+			margin-bottom: 14px
+
+			&:last-child
+				margin-bottom: 0
+
+	&_socials-vk
+		background-color: $blue-vk
+
+	&_socials-fb
+		background-color: $blue-fb
+
+	&_socials-gl
+		background-color: $red-g
+
+	&_socials-ok
+		background-color: $orange-ok
+
+	&_hot_news
+		width: 530px
+		margin-bottom: 10px
+		background-color: $orange-dark!important
+		animation: glowing 1500ms infinite
+		&:hover
+			box-shadow: 0 0 10px #fff
+
+		+r($mobileL)
+			width: 95%
+			span
+				font-size: 22px!important
+		+r($mobileM)
+			width: 90%
+			span
+				font-size: 16px!important
+
+
+
+@keyframes glowing
+	0%
+		box-shadow: 0 0 1px #fff
+	50%
+		box-shadow: 0 0 15px #fff
+	100%
+		box-shadow: 0 0 1px #fff
+
+.section-tags__button
+	+r($mobileL)
+		margin-bottom: 10px
+
+.hamburger
+	display: none
+	width: 28px
+	height: 20px
+	//padding: 4px
+	//background: url('/img/icons/hamburger.svg') center center no-repeat
+	//flex-direction: column
+	//justify-content: space-between
+	transition: height ease-in-out .4s
+	&__line
+		width: 20px
+		height: 2px
+		background-color: $white
+	+r($md-desktop)
+		display: block
+	// for bad-visible
+.special-color-1 .hamburger,
+.special-color-3 .hamburger,
+.special-color-4 .hamburger,
+.special-color-5 .hamburger
+	&__line
+		background-color: $black !important
+
+.special-color-2 .hamburger
+	&__line
+		background-color: $white !important
+
+.special-color-1 .button,
+.special-color-3 .button,
+.special-color-4 .button,
+.special-color-5 .button
+	&_close-mobile-line
+		background-color: $black !important
+
+.special-color-2 .button
+	&_close-mobile-line
+		background-color: $white !important
+	// for bad-visible

@@ -1,0 +1,134 @@
+.container
+	margin: 0 auto
+	padding-left: 32px
+	padding-right: 32px
+
+	&_small
+		max-width: 1440px
+		margin: 0 auto
+		padding-left: 150px
+		padding-right: 150px
+
+		+r($max-laptop)
+			padding-left: 50px
+			padding-right: 50px
+
+		+r($mobileL)
+			padding-left: 25px
+			padding-right: 25px
+
+	&_slider
+		max-width: 1440px
+		margin: 0 auto
+		padding-left: 100px
+		padding-right: 100px
+
+		+r($max-laptop)
+			padding-left: 25px
+			padding-right: 25px
+
+.page-section
+	min-height: 100vh
+	padding-bottom: 50px
+
+section
+	width: 100%
+
+	+r($laptop)
+		max-width: 835px
+
+	+r($mobileL)
+		max-width: 550px
+
+	+r($mobileM)
+		max-width: 360px
+
+	+r($mobileS)
+		max-width: 320px
+
+.section-title
+	padding-top: 50px
+	padding-bottom: 50px
+
+.section-title-small
+	padding-top: 40px
+	padding-bottom: 40px
+
+	+r($mobileL)
+		padding-top: 30px
+		padding-bottom: 20px
+
+.section-title-extra-small
+	padding-top: 30px
+	padding-bottom: 30px
+
+.fade
+	position: absolute
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+	z-index: 250
+
+	display: none
+	background-color: $tr-03
+	transition: all .3s
+
+.fade-show
+	display: block
+
+	&--over-header
+		z-index: $header-z-index + 1
+		display: block
+
+.collapses-container
+	padding-top: 125px
+
+.title-with-icon
+	display: flex
+	align-items: center
+
+	.text
+		padding-left: 12px
+
+		+r($laptop)
+			padding-left: 0
+
+.hidden-inputs
+	display: none
+
+.flex-container-space-btw
+	display: flex
+	justify-content: space-between
+
+	+r($mobileL)
+		flex-direction: column
+
+.section-title-small
+	+r($mobileL)
+		.h3
+			font-size: 16px
+			line-height: $line-height-18
+
+	// Dadata адаптив
+.suggestions-addon
+	display: none !important
+
+.suggestions-mobile
+	+r($mobileL)
+		width: 100% !important
+		left: 0 !important
+		right: 0 !important
+
+.suggestions-suggestion
+	+r($mobileL)
+		padding-left: 10px !important
+		border: 1px solid $stroke
+
+.disabled-input
+	pointer-events: none
+	color: $grey_light !important
+
+.disabled-btn-brown
+	pointer-events: none
+	background-color: $brown_4 !important

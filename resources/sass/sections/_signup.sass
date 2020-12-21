@@ -1,0 +1,235 @@
+.signup-section
+	display: flex
+	flex-direction: column
+	min-height: 737px
+	height: 0
+	background: url('/img/pictures/bg-main-page.jpg')
+	background-position: center 2%
+	background-size: cover
+	background-repeat: no-repeat
+
+	+r($mobileL)
+		min-height: 383px
+		height: auto
+		padding-bottom: 36px
+
+	&__content
+		display: flex
+		justify-content: flex-end
+		flex: 1 1 auto
+		flex-direction: column
+		align-items: center
+
+		padding-bottom: 20px
+
+		+r($mobileL)
+			position: relative
+			justify-content: flex-end
+			flex-direction: column
+			padding: 45px 25px 0 25px
+			height: 100%
+
+	&__title
+		padding-bottom: 25px
+		text-align: center
+
+		+r($mobileL)
+			padding-bottom: 19px
+			font-size: 26px
+			line-height: 27px
+			align-self: flex-start
+			text-align: left
+
+	&__text
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+
+		padding-bottom: 47px
+		max-width: 960px
+
+		line-height: 36px
+		font-family: 'Circe', sans-serif
+		text-align: center
+
+		+r($max-laptop)
+			padding-bottom: 20px
+		+r($mobileL)
+			padding-bottom: 28px
+			font-size: 14px
+			line-height: 17px
+			text-align: left
+
+		+r($mobileS)
+			align-items: baseline
+
+	&__buttons-group
+		display: flex
+
+		.button
+			min-width: 200px
+			+r($mobileL)
+				width: 100%
+
+			&:first-child
+				margin-right: 30px
+				+r($mobileL)
+					margin-right: 0
+					margin-bottom: 15px
+
+		+r($mobileL)
+			flex-direction: column
+			width: 100%
+			min-height: 85px
+
+	&__links-groups
+		display: flex
+		align-items: center
+		max-width: 500px
+		margin-top: 17px
+
+		+r($max-laptop)
+			margin-top: 20px
+		+r($mobileL)
+			align-self: flex-start
+			margin-top: 20px
+
+	&__founder
+		max-width: 600px
+		a.link
+			+r($mobileL)
+				font-size: 14px
+				line-height: 120%
+				text-align: center
+			+r($mobileM)
+				font-size: 14px
+				text-align: left
+
+	&__link
+		margin-left: 20px
+
+		+r($mobileL)
+			margin-left: 10px
+
+		&:first-child
+			margin-left: 0
+
+		.link
+			display: inline-block
+			background-repeat: no-repeat
+			&:hover, &:focus
+				outline: none
+
+	&__link-first
+		width: 147px
+		height: 47px
+		background-image: url('/img/icons/signup-link2-icon.svg')
+
+		+r($mobileL)
+			width: 27px
+			height: 29px
+			background-image: url('/img/icons/signup-link2-short-icon.svg')
+
+	&__link-second
+		width: 228px
+		height: 47px
+		background-image: url('/img/icons/signup-link1-icon.svg')
+
+		+r($mobileL)
+			width: 28px
+			height: 29px
+			background-image: url('/img/icons/signup-link1-short-icon.svg')
+
+	&__link-third
+		width: 73px
+		height: 38px
+		background-image: url('/img/icons/signup-link3-icon.svg')
+		&:hover, &:focus
+			filter: invert(53%) sepia(18%) saturate(1432%) hue-rotate(325deg) brightness(101%) contrast(101%)
+
+		+r($mobileL)
+			width: 104px
+			height: 29px
+			background-image: url('/img/icons/signup-link3-short-icon.svg')
+
+	.header
+		position: relative
+		background-color: $tr
+
+		.link
+			color: $white
+
+			&:hover
+				color: $red_1
+			&:focus
+				color: $red_1
+				outline: none
+
+		.header-visible-button svg
+			color: $white
+
+		.header-visible-button:hover svg
+			color: $red_1
+
+		.header-visible-button:focus svg
+			color: $red_1
+
+		.header-logo
+			background-image: url("/img/icons/logo-icon.svg")
+
+		.hamburger polygon
+			fill: $white
+
+		&_active
+			position: fixed
+			top: 0
+			z-index: 300
+			background-color: $white
+			box-shadow: 1px 4px 5px -3px rgba(199,199,199,1)
+
+			.link
+				color: $brown
+
+			.header-visible-button svg
+				color: $brown
+
+			.header-logo
+				background: url("/img/icons/logo-dark-icon.svg")
+
+			.button_login
+				border: 1px solid $stroke
+				padding-top: 12px
+
+			.hamburger__line
+				background-color: $brown
+
+			.header-icon-beta
+				path
+					fill: #a7a9ac
+
+				rect
+					stroke: #a7a9ac
+
+			.hamburger polygon
+				fill: $black
+
+			// for bad-visible
+.special-color-1 .signup-section .header_active .header-logo,
+.special-color-2 .signup-section .header_active .header-logo,
+.special-color-3 .signup-section .header_active .header-logo,
+.special-color-4 .signup-section .header_active .header-logo,
+.special-color-5 .signup-section .header_active .header-logo
+	background-image: url("/img/icons/logo-dark-icon.svg") !important
+
+.special-color-1 .signup-section .header .header-logo,
+.special-color-2 .signup-section .header .header-logo,
+.special-color-3 .signup-section .header .header-logo,
+.special-color-4 .signup-section .header .header-logo,
+.special-color-5 .signup-section .header .header-logo
+	background-image: url("/img/icons/logo-dark-icon.svg") !important
+// for bad-visible
+
+
+
+

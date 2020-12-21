@@ -1,0 +1,47 @@
+.link
+	text-decoration: none
+
+	&_with-icon
+		display: flex
+		align-items: center
+
+		.text
+			padding-left: 12px
+
+			+r($laptop)
+				padding-left: 0
+
+.link_underline
+	text-decoration: underline
+
+.link_underline-hover
+	text-decoration: none
+
+	&:hover
+		text-decoration: underline
+
+.pagination__link
+	display: block
+	padding: 5px 10px
+	font-size: 19px
+	color: $black
+	border: 1px solid transparent
+	&:focus, &:hover
+		border: 1px solid $beige
+		border-radius: 5px
+		color: $red_1
+		outline: none
+
+	&_active
+		color: $white
+		background-color: $beige
+		border-radius: 5px
+		&:focus, &:hover
+			color: $white
+			background-color: $red_1
+			border: 1px solid $red_1
+
+.hashtag-block__link
+
+	+r($mobileL)
+		display: block

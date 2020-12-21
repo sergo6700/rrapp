@@ -1,0 +1,61 @@
+{
+	"extends": ["stylelint-config-htmlacademy", "stylelint-config-prettier"],
+	"plugins": [
+    "stylelint-order",
+  	],
+	"rules": {
+		"indentation": "tab",
+        "no-missing-end-of-source-newline": null,
+		"max-empty-lines": 4,
+		"property-no-unknown": true,
+		"no-descending-specificity": null,
+		"order/properties-order": [
+		"position",
+		"top",
+		"right",
+		"bottom",
+		"left",
+		"z-index",
+		"display",
+		"width",
+		"height",
+		"margin",
+		"padding",
+		"font",
+		"font-style",
+		"font-size",
+		"line-height",
+		"font-family",
+		"text-align",
+		"color",
+		"background-color",
+		"border: 1px solid",
+		"border-radius",
+		"opacity",
+		"transition"
+		],
+		"order/order": [
+      "declarations",
+      {
+        "type": "at-rule",
+        "name": "media"
+      },
+      {
+        "type": "rule",
+        "selector": "^&::(before|after)"
+      },
+      {
+        "type": "rule",
+        "selector": "^&:\\w"
+      },
+      {
+        "type": "rule",
+        "selector": "^&_"
+      },
+      {
+        "type": "rule",
+        "selector": "^."
+      }
+    ],
+	}
+}

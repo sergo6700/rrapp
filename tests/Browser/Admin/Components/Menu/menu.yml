@@ -1,0 +1,106 @@
+selector: div.wrapper > aside > section > ul.sidebar-menu
+items:
+  ### DASHBOARD ############################################
+
+  - type: link
+    selector: "li:nth-child($i)"
+    roles:
+      - admin
+      - moderator
+    link:
+      selector: " > a"
+      url: backpack_url('/dashboard')
+      text: "Панель управления"
+
+  ### БЛОГ ############################################
+
+  - type: separator
+    selector: "li:nth-child($i).header"
+    roles:
+      - admin
+      - moderator
+    text: "БЛОГ"
+
+
+  - type: link
+    selector: "li:nth-child($i)"
+    roles:
+      - admin
+      - moderator
+    link:
+      selector: " > a"
+      url: backpack_url('/article')
+      text: "Статьи"
+
+
+  - type: link
+    selector: "li:nth-child($i)"
+    roles:
+      - admin
+      - moderator
+    link:
+      selector: " > a"
+      url: backpack_url('/news')
+      text: "Новости"
+
+  ### КОНТЕНТ ############################################
+
+  - type: separator
+    selector: "li:nth-child($i).header"
+    roles:
+      - admin
+      - moderator
+    text: "КОНТЕНТ"
+
+
+  - type: link
+    selector: "li:nth-child($i)"
+    roles:
+      - admin
+      - moderator
+    link:
+      selector: " > a"
+      url: backpack_url('/page')
+      text: "Страницы"
+
+
+  - type: link
+    selector: "li:nth-child($i)"
+    roles:
+      - admin
+      - moderator
+    link:
+      selector: " > a"
+      url: backpack_url('/page-template')
+      text: "Шаблоны страниц"
+
+  ### СИСТЕМА ############################################
+
+  - type: separator
+    selector: "li:nth-child($i).header"
+    roles:
+      - admin
+      - moderator
+    text: "СИСТЕМА"
+
+
+  - type: link
+    selector: "li:nth-child($i)"
+    roles:
+      - admin
+      - moderator
+    link:
+      selector: " > a"
+      url: backpack_url('/elfinder')
+      text: "Файловый менеджер"
+
+
+  - type: link
+    selector: "li:nth-child($i)"
+    roles:
+      - admin
+      - moderator
+    link:
+      selector: " > a"
+      url: backpack_url('/setting')
+      text: "Настройки"

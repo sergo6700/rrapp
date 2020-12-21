@@ -1,0 +1,42 @@
+.card-media
+	display: block
+	text-decoration: none !important
+	word-break: break-word
+
+	.card-media__rated-parent
+		position: relative
+		height: 0
+		width: 100%
+		padding-top: calc(312% / 360 * 100)	// пропорции из макета
+		margin-bottom: 15px
+		+r($laptopS)
+			padding-top: calc(153% / 269 * 100)	// пропорции из макета
+			margin-bottom: 8px
+
+		.card-media__rated-child
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+
+			.card-media__img
+				display: block
+				width: 100%
+				height: 100%
+				object-fit: cover
+				border-radius: $border-radius--main
+
+	.card-media__text
+		transition: color $transition-time
+		font-size: 20px
+		line-height: 1.3
+
+		+r($laptopS)
+			font-size: 14px
+			line-height: 1.20
+
+	&:hover
+		.card-media__text
+			color: $red_1
+

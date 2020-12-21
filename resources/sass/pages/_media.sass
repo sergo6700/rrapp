@@ -1,0 +1,27 @@
+.media-container
+
+	display: flex
+	flex-flow: row wrap
+	$marginHor: 30px
+	$marginVert: 75px
+	> *
+		flex: 0 0 calc((100% - (2 * #{$marginHor})) / 3)
+		margin-right: $marginHor
+		margin-bottom: $marginVert
+		&:nth-child(3n)
+			margin-right: 0
+
+		+r($max-laptop)
+			flex: 0 0 calc((100% - (1 * #{$marginHor})) / 2)
+
+			&:nth-child(3n)
+				margin-right: auto
+			&:nth-child(2n)
+				margin-right: 0
+
+		+r($laptopS)
+			flex: 0 0 100%
+			margin-bottom: 30px
+
+			&:nth-child(2n)
+				margin-right: auto

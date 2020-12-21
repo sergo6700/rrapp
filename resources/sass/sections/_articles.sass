@@ -1,0 +1,170 @@
+.articles-section
+	.section-title
+		+r($mobileL)
+			padding-bottom: 25px
+			padding-top: 25px
+			font-size: 18px
+			line-height: 23px
+
+	.section-link-wrapper
+		.button_mobile
+			display: none
+
+		+r($laptop)
+			display: block
+
+			.button_mobile
+				display: block
+
+		+r($mobileL)
+			padding-left: 0
+			padding-right: 0
+
+.articles-container
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
+
+	+r($laptop)
+		flex-direction: column
+		align-items: center
+
+.articles-card
+	position: relative
+	border-radius: $border-radius--main
+	overflow: hidden
+	cursor: pointer
+
+	&__gradient
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		border-radius: $border-radius--main
+		background: linear-gradient(0.27deg, rgba(0, 0, 0, 0.85) 0.19%, rgba(0, 0, 0, 0.04) 100.93%)
+
+		+r($mobileL)
+			border-radius: 3px
+
+	&__gradient_main-page
+		background: linear-gradient(36.02deg, rgba(0, 0, 0, 0.72) 27.53%, rgba(31, 11, 5, 0.35) 85.78%)
+
+	&_big
+		width: 100%
+		flex-grow: 1
+		max-height: 390px
+		margin-bottom: 30px
+
+		+r($laptop)
+			display: none
+
+	&_small
+		width: calc(50% - 15px)
+		max-height: 270px
+		margin-bottom: 30px
+		transition: width .3s
+
+		.section-link::after
+			top: -2px
+
+		+r($laptop)
+			width: 100%
+			min-width: 269px
+			max-height: 273px
+			height: 100%
+			margin-bottom: 15px
+
+	&__image
+		object-fit: cover
+		width: 100%
+		height: 100%
+
+	&_article-page
+		min-height: 515px
+		background: url('/img/pictures/article-image.jpg')
+		display: flex
+		flex-direction: column
+		justify-content: flex-end
+		background-position: center
+		background-size: cover
+		background-repeat: no-repeat
+		border-radius: $border-radius--main
+		+r($mobileL)
+			min-height: 273px
+
+	&__info
+		position: absolute
+		bottom: 45px
+		left: 40px
+		padding: 30px
+		max-width: 392px
+
+		background-color: $beige
+		border-radius: $border-radius--main
+		transform: rotate(2.5deg)
+
+	&__info-content
+		transform: rotate(-2.5deg)
+
+	&__info-data
+		display: block
+		padding-bottom: 17px
+
+		+r($laptop)
+			font-size: 16px
+			padding-bottom: 8px
+
+		+r($mobileL)
+			font-size: 13px
+
+	&__info-title
+		display: block
+		padding-bottom: 18px
+		font-weight: 550
+		overflow: hidden
+		max-height: 130px
+		white-space: pre-wrap
+
+		+r($laptop)
+			font-size: 20px
+			padding-bottom: 0
+
+		+r($mobileL)
+			font-size: 14px
+			line-height: 17px
+
+	&__info-title_big
+		max-height: 150px
+
+	&__info-link
+		position: relative
+		&:focus
+			outline: none
+			text-decoration: underline
+
+		&::after
+			content: url('/img/icons/arrow-right-white-icon.svg')
+			position: absolute
+			top: -1px
+			right: -35px
+			color: $white
+
+.articles-card__content
+	position: absolute
+	bottom: 0
+	left: 0
+	width: 100%
+	max-width: 100%
+	max-height: 270px
+	padding-left: 35px
+	padding-right: 40px
+	padding-bottom: 40px
+	padding-top: 30px
+
+	.section-link-arrow
+		+r($laptop)
+			display: none
+
+
+

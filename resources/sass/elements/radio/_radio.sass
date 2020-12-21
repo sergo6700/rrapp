@@ -1,0 +1,47 @@
+.radio-custom
+  min-height: 24px
+  min-width: 24px
+  display: block
+  position: relative
+  cursor: pointer
+  font-family: "PT Sans", sans-serif
+  font-size: 19px
+  line-height: 32px
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+  +r($laptop)
+    font-size: 16px
+    line-height: 130%
+  input
+    position: absolute
+    opacity: 0
+    cursor: pointer
+    height: 0
+    width: 0
+    &:checked ~ .checkmark:after
+      display: block
+  span:not(.checkmark)
+    padding-left: 35px
+  .checkmark
+    position: absolute
+    top: 50%
+    left: 0
+    height: 24px
+    width: 24px
+    border: 1px solid #CCCCCC
+    border-radius: 50%
+    transform: translateY(-50%)
+    &::after
+      content: ""
+      position: absolute
+      display: none
+      top: 50%
+      left: 50%
+      width: 16px
+      height: 16px
+      border-radius: 50%
+      background: #C59368
+      transform: translate(-50%, -50%)    
+  

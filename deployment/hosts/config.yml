@@ -1,0 +1,24 @@
+develop:
+    hostname: 92.53.107.124
+    user: deploy
+    port: 22
+    identityFile: deployment/decrypted_credentials/id_rsa_deployment
+    forwardAgent: true
+    multiplexing: true
+    sshOptions:
+        UserKnownHostsFile: /dev/null
+        StrictHostKeyChecking: no
+    stage: develop
+    deploy_path: /home/deploy/dev_mb_rostov
+production:
+    hostname: 92.53.107.124
+    user: deploy
+    port: 22
+    identityFile: deployment/decrypted_credentials/id_rsa_deployment
+    forwardAgent: true
+    multiplexing: true
+    sshOptions:
+        UserKnownHostsFile: /dev/null
+        StrictHostKeyChecking: no
+    stage: master
+    deploy_path: /home/deploy/mb_rostov

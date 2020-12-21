@@ -1,0 +1,88 @@
+.news-page-section
+	min-height: 110vh
+	padding-bottom: 66px
+
+.section-content
+	padding-bottom: 115px
+
+	+r($mobileL)
+		padding-bottom: 50px
+
+	.title-with-filters__buttons
+		width: inherit
+
+
+.news-container
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
+
+	+r($laptop)
+		flex-direction: column
+		justify-content: center
+
+
+.block-news
+	width: calc(50% - 15px)
+	padding-bottom: 60px
+	word-break: break-word
+
+	+r($laptop)
+		width: 100%
+		padding-bottom: 0
+
+	+r($mobileL)
+		margin-bottom: 30px
+
+	&__title
+		display: block
+		margin-top: 5px
+
+		text-decoration: none
+
+		&:hover, &:focus
+			color: $red_1
+			outline: none
+			transition: color .3s
+
+		+r($mobileL)
+			font-size: 14px
+			line-height: $line-height-18
+
+	&__img-wrap
+		width: 100%
+		max-width: 100%
+		margin-bottom: 20px
+
+		+r($mobileL)
+			margin-bottom: 8px
+
+	&__img
+		object-fit: cover
+		height: 317px
+		width: 100%
+		border-radius: $border-radius--main
+
+		+r($laptop)
+			width: 100%
+			height: auto
+
+	&__link
+		display: block
+		width: 100%
+		max-width: 100%
+		min-width: 270px
+		border-radius: $border-radius--main
+
+		&:focus
+			outline: 3px solid $red_1
+
+.date-news
+	margin-bottom: 16px
+
+	color: $beige
+	font-weight: 600
+
+	+r($mobileL)
+		font-size: 13px
+		line-height: $line-height-14

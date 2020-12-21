@@ -1,0 +1,68 @@
+.activity-page-section
+	min-height: 100vh
+	padding-bottom: 66px
+
+.activity-page-content
+	padding-top: 125px
+
+.activity-column-container
+	display: flex
+	justify-content: space-between
+
+	+r($laptop)
+		flex-direction: column
+
+.activity-column-text
+	overflow: hidden
+	width: 60%
+	margin-right: 20px
+
+	img:first-child
+		margin-top: 0
+
+	img
+		+r($max-laptop)
+			width: 100%!important
+			height: auto!important
+
+	+r($laptop)
+		width: 100%
+		margin-bottom: 20px
+
+.activity-column-brief
+	width: 32%
+	min-width: 300px
+
+	&.activity-column-brief--sticky-content
+		position: sticky
+		top: $header-height + 28px
+		align-self: flex-start
+
+	&__button
+		width: 100%
+
+	.brief-card
+		margin-bottom: 35px
+
+		+r($mobileL)
+			margin-bottom: 20px
+
+	+r($laptop)
+		width: 100%
+
+	+r($mobileL)
+		min-width: unset
+
+.activity-page-title
+	+r($mobileL)
+		padding-top: 30px
+		padding-bottom: 20px
+
+		font-size: 18px
+		line-height: $line-height-22
+
+
+
+
+
+

@@ -1,0 +1,40 @@
+.breadcrumb
+  overflow: hidden
+  margin: 23px 0 0
+  padding: 0
+  list-style-type: none
+  +r($md-desktop)
+    margin-top: 35px
+  &-item
+    float: left
+    margin-right: 12px
+    +r($laptop)
+      margin-right: 7px
+    & a
+      margin-right: 10px
+      text-decoration: none
+      transition: all .3s ease
+      outline: none
+      +r($laptop)
+        margin-right: 5px
+      &:hover span
+        color: #58595B
+      &:focus span
+        color: black
+      & span
+        color: #808285
+    & span
+      font-size: 20px
+      line-height: 1.3
+      color: black
+      +r($laptop)
+        font-size: 14px
+    & svg
+      height: 12px
+      width: 8px
+      +r($laptop)
+        height: 8px
+        width: 5px
+
+  &-item:last-child
+    margin-right: 0

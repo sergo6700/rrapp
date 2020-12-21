@@ -1,0 +1,37 @@
+.services-container_small
+	padding-bottom: 40px
+	padding-top: 40px
+
+	+r($mobileL)
+		padding-top: 10px
+
+.title-with-filters_small
+	padding-bottom: 40px
+
+	+r($mobileL)
+		padding-bottom: 20px
+
+.hashtag-block
+	margin-bottom: 30px
+
+	&__text
+		+r($mobileL)
+			font-size: 10px
+			line-height: $line-height-12
+
+	&__visible
+		overflow: hidden
+
+	&__inner
+		max-height: 3em
+		position: relative
+		line-height: 10px
+		&.show_all
+			max-height: unset
+
+	&__link
+		&:hover, &:focus
+			outline: none
+			color: #F17757
+			& span
+				color: #F17757

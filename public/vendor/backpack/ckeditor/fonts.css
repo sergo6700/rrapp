@@ -1,0 +1,88 @@
+/* CirceMD */
+@font-face {
+    font-family: "CirceMD Bold";
+    src: url('fonts/CirceMD/CRC65PMD.otf '); /* IE */
+    src: local("CirceMD"), url('fonts/CirceMD/CRC65PMD.otf ') format("truetype"); /*non-IE*/
+}
+
+@font-face {
+    font-family: "CirceMD Extra Bold";
+    src: url('fonts/CirceMD/CRC75PMD.otf '); /* IE */
+    src: local("CirceMD"), url('fonts/CirceMD/CRC75PMD.otf ') format("truetype"); /*non-IE*/
+}
+
+/* OpenSans */
+@font-face {
+    font-family: "Open Sans Bold";
+    src: url('fonts/OpenSans/OpenSans-Bold_0.ttf'); /* IE */
+    src: local("CirceMD"), url('fonts/OpenSans/OpenSans-Bold_0.ttf') format("truetype"); /*non-IE*/
+}
+
+@font-face {
+    font-family: "Open Sans ExtraBold Italic";
+    src: url('fonts/OpenSans/OpenSans-ExtraBoldItalic_0.ttf'); /* IE */
+    src: local("CirceMD"), url('fonts/OpenSans/OpenSans-ExtraBoldItalic_0.ttf') format("truetype"); /*non-IE*/
+}
+
+@font-face {
+    font-family: "Open Sans Italic";
+    src: url('fonts/OpenSans/OpenSans-Italic_0.ttf'); /* IE */
+    src: local("CirceMD"), url('fonts/OpenSans/OpenSans-Italic_0.ttf') format("truetype"); /*non-IE*/
+}
+
+@font-face {
+    font-family: "Open Sans Light";
+    src: url('fonts/OpenSans/OpenSans-Light_0.ttf'); /* IE */
+    src: local("CirceMD"), url('fonts/OpenSans/OpenSans-Light_0.ttf') format("truetype"); /*non-IE*/
+}
+
+@font-face {
+    font-family: "Open Sans Regular";
+    src: url('fonts/OpenSans/OpenSans-Regular_0.ttf'); /* IE */
+    src: local("CirceMD"), url('fonts/OpenSans/OpenSans-Regular_0.ttf') format("truetype"); /*non-IE*/
+}
+
+@font-face {
+    font-family: "Open Sans Semibold Italic";
+    src: url('fonts/OpenSans/OpenSans-SemiboldItalic_0.ttf'); /* IE */
+    src: local("CirceMD"), url('fonts/OpenSans/OpenSans-SemiboldItalic_0.ttf') format("truetype"); /*non-IE*/
+}
+
+
+
+/* PTSans */
+@font-face {
+    font-family: "PT Sans Narrow Regular";
+    src: url('fonts/PTSans/PTN57F_3.ttf'); /* IE */
+    src: local("CirceMD"), url('fonts/PTSans/PTN57F_3.ttf') format("truetype"); /*non-IE*/
+}
+
+@font-face {
+    font-family: "PT Sans Narrow Bold";
+    src: url('fonts/PTSans/PTN77F_3.ttf'); /* IE */
+    src: local("CirceMD"), url('fonts/PTSans/PTN77F_3.ttf') format("truetype"); /*non-IE*/
+}
+
+@font-face {
+    font-family: "PT Sans Regular";
+    src: url('fonts/PTSans/PTS55F_2.ttf'); /* IE */
+    src: local("CirceMD"), url('fonts/PTSans/PTS55F_2.ttf') format("truetype"); /*non-IE*/
+}
+
+@font-face {
+    font-family: "PT Sans Italic";
+    src: url('fonts/PTSans/PTS56F_2.ttf'); /* IE */
+    src: local("CirceMD"), url('fonts/PTSans/PTS56F_2.ttf') format("truetype"); /*non-IE*/
+}
+
+@font-face {
+    font-family: "PT Sans Bold";
+    src: url('fonts/PTSans/PTS75F_2.ttf'); /* IE */
+    src: local("CirceMD"), url('fonts/PTSans/PTS75F_2.ttf') format("truetype"); /*non-IE*/
+}
+
+@font-face {
+    font-family: "PT Sans Bold Italic";
+    src: url('fonts/PTSans/PTS76F_2.ttf'); /* IE */
+    src: local("CirceMD"), url('fonts/PTSans/PTS76F_2.ttf') format("truetype"); /*non-IE*/
+}

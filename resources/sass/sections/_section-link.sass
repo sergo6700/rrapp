@@ -1,0 +1,38 @@
+.section-link-wrapper
+	min-height: 112px
+	display: flex
+	justify-content: center
+	align-items: center
+	+r($mobileL)
+		padding-left: 25px
+		padding-right: 25px
+		padding-bottom: 25px
+		min-height: 0
+	&_small
+		min-height: auto
+		padding-bottom: 50px
+		+r($mobileL)
+			padding-bottom: 15px
+
+	+r($laptop)
+		display: none
+
+.section-link
+	position: relative
+	&:hover, &:focus
+		color: $red_1
+		text-decoration: underline
+		outline: none
+		& + .arrow-icon path
+			fill: $red_1
+	+r($laptop)
+		font-size: 22px
+	+r($mobileL)
+		// display: none
+
+.section-link-arrow
+	.section-link
+		margin-right: 10px
+	+r($laptop)
+		display: none
+

@@ -1,0 +1,247 @@
+$side-panel-item-w: 60px
+$side-panel-item-maxw: 274px
+
+.side-panel
+	position: fixed
+	bottom: 0
+	left: 0
+	z-index: $header-z-index + 2
+
+	display: flex
+	flex-direction: column
+	align-items: flex-start
+
+	height: calc(100vh - 188px)
+
+	+r($laptop)
+		right: 25px
+		left: auto
+
+		align-items: flex-end
+
+		height: auto
+
+	&--faded
+		.side-panel__btn--menu,
+		.side-panel__btn--up
+			opacity: 0
+			pointer-events: none
+
+	&__nav
+		max-width: $side-panel-item-w
+		opacity: 1
+		transition: opacity $transition-time
+
+		+r($laptop)
+			position: fixed
+			left: calc(50vw - 320px/2)
+			z-index: 1
+
+			display: flex
+			flex-direction: column
+			justify-content: center
+			align-items: center
+
+			width: 320px
+			max-width: none
+			padding: 82px 25px 45px 25px
+
+			background-color: $brown
+			visibility: hidden
+
+			&--active
+				visibility: visible
+
+		+r($mobileL)
+			top: 84px
+
+		&--hidden
+			opacity: 0
+
+	&__item
+		position: relative
+
+		display: flex
+		align-items: center
+
+		+square($side-panel-item-w)
+		max-width: $side-panel-item-maxw
+		padding-left: $side-panel-item-w
+
+		background-color: $beige
+		border-radius: 6px
+
+		overflow: hidden
+		transition: width $transition-time
+
+		+r($laptop)
+			width: 100%
+			max-width: none
+			height: 50px
+
+		&:not(:last-child)
+			margin-bottom: 15px
+
+		&:not(.side-panel__item--active) .side-panel__link
+			opacity: 0
+
+			+r($laptop)
+				opacity: 1
+				min-width: 210px
+
+		&:hover:not(.side-panel__item--in-progress)
+			width: $side-panel-item-maxw
+			cursor: pointer
+
+			+r($laptop)
+				width: 100%
+
+			.side-panel__link
+				opacity: 1
+
+		&--red
+			background-color: $red
+
+		&--active
+			width: $side-panel-item-maxw
+
+			.side-panel__link
+				min-width: 0
+				max-width: $side-panel-item-maxw - $side-panel-item-w*2
+				margin-right: auto
+
+				&::before
+					width: $side-panel-item-maxw - $side-panel-item-w
+
+			.side-panel__btn--close
+				display: block
+
+			.side-panel__arrow-icon
+				display: none
+
+	&__link
+		display: flex
+		align-items: center
+		justify-content: space-between
+
+		max-height: 2.1em
+		min-width: $side-panel-item-maxw - $side-panel-item-w
+		padding-left: 7px
+
+		font-size: 14px
+		line-height: 1.05em
+
+		overflow: hidden
+
+		transition: opacity $transition-time
+
+		&::before
+			content: ""
+			position: absolute
+			top: 0
+			left: 0
+			z-index: 0
+
+			width: 100%
+			height: 100%
+
+	&__arrow-icon
+		margin: 12px
+		min-width: 29px
+
+		+r($laptop)
+				visibility: hidden
+
+		&--to-right
+			transform: rotate(-90deg)
+
+		&--to-top
+			transform: rotate(180deg)
+			visibility: visible
+
+	&__decor-icon-wrapper
+		position: absolute
+		top: 0
+		left: 0
+
+		+square($side-panel-item-w)
+		display: flex
+		align-items: center
+		justify-content: center
+
+		+r($laptop)
+			width: 54px
+			height: 50px
+
+	&__decor-icon
+		+r($laptop)
+			transform: scale(0.82)
+
+	&__btn
+		+square($side-panel-item-w)
+
+		font-size: 0
+		text-align: center
+		vertical-align: middle
+
+		background-color: $red
+		border-radius: 6px
+
+		opacity: 1
+
+		transition: opacity $transition-time
+
+		+r($laptop)
+			+square(53px)
+			min-height: 53px
+			border-radius: 5px
+
+		&--close
+			display: none
+
+			&::after
+				content: url(/img/icons/close--white.svg)
+				display: inline-block
+				+square(24px)
+
+		&--close-menu
+			display: none
+
+			&::after
+				content: url(/img/icons/close--white.svg)
+				display: inline-block
+				+square(24px)
+
+			+r($laptop)
+				position: absolute
+				top: 0
+				right: 0
+
+				display: block
+				+square(50px)
+				background-color: $brown
+
+		&--up
+			margin-top: auto
+			margin-bottom: 43px
+			&:hover, &:focus
+				outline: none
+
+			+r($laptop)
+				margin-top: 0
+				margin-bottom: 99px
+
+			&-hidden
+				opacity: 0
+
+		&--menu
+			display: none
+
+			margin-top: auto
+			margin-bottom: 15px
+
+			+r($laptop)
+				display: block
+
+			img
+				display: inline-block

@@ -1,0 +1,108 @@
+defaults: &defaults
+  working_directory: ~/repo
+  docker:
+    - image: nikitakiselev/circleci-php7.2-image:1.0
+      environment:
+        APP_ENV: testing
+        APP_DEBUG: true
+        APP_LOG_LEVEL: debug
+
+        DB_DATABASE: rrapp_testing
+        DB_HOST: '127.0.0.1'
+        DB_USERNAME: root
+        DB_PASSWORD: ''
+
+    - image: circleci/mysql:5.7
+      environment:
+        MYSQL_ALLOW_EMPTY_PASSWORD: yes
+        MYSQL_ROOT_PASSWORD: ''
+        MYSQL_DATABASE: rrapp_testing
+        #MYSQL_TCP_PORT: 31307
+    - image: redis
+
+version: 2
+jobs:
+  build:
+    branches:
+      only:
+        - develop
+#        - /feature.*/
+        - circleci_deploy
+        - master
+
+    <<: *defaults
+
+    steps:
+      - checkout
+
+      - restore_cache:
+          keys:
+            - composer-v1-{{ checksum "composer.lock" }}
+            - composer-v1-
+
+      - run:
+          name: Composer Install
+          command: composer install -n --prefer-dist
+
+      - run:
+          name: Rsync Install
+          command: |
+            sudo apt update && sudo apt install rsync
+
+      - save_cache:
+          key: composer-v1-{{ checksum "composer.lock" }}
+          paths:
+            - vendor
+
+      - run:
+          name: Laravel Initialization
+          command: |
+            cp .env.circleci .env
+            php artisan key:generate
+            php artisan cache:clear
+      - run:
+          name: Migrations And Seeds
+          command: |
+            dockerize -wait tcp://127.0.0.1:3306 -timeout 120s \
+             && php artisan migrate --step
+      - run:
+          name: Check rollback migrations
+          command: |
+            dockerize -wait tcp://127.0.0.1:3306 -timeout 120s \
+             && php artisan migrate:refresh
+
+      - run:
+          name: Run deployment
+          command: chmod +x ./deployment/scripts/deploy.sh && ./deployment/scripts/deploy.sh
+
+      ########################
+      ## Notifications section
+      #
+      # Env vars from circleci:
+      # $notification_discord_webhook
+      # $notification_success_message
+      # $notification_fail_message
+      #
+      ########################
+      - run:
+          name: Upload Success Tests
+          command:  |
+            echo "Sending message to discord"
+            if [[ -z "$notification_success_message" ]]; then
+                echo "Not found configured env, so nothing to send"
+            else
+                curl -H "Content-Type: application/json" -X POST -d "{\"content\":\"$notification_success_message\"}" "$notification_discord_webhook"
+            fi
+          when: on_success
+
+      - run:
+          name: Upload Failed Tests
+          command:  |
+            echo "Sending message to discord"
+            if [[ -z "$notification_fail_message" ]]; then
+                echo "Not found configured env, so nothing to send"
+            else
+                curl -H "Content-Type: application/json" -X POST -d "{\"content\":\"$notification_fail_message\"}" "$notification_discord_webhook"
+            fi
+          when: on_fail
+      ########################

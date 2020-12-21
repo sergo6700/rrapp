@@ -1,0 +1,44 @@
+.filter-dropdown
+	position: absolute
+	top: 120px
+	right: 0
+	z-index: 100
+	display: none
+	width: 100%
+	max-width: 555px
+	min-width: 270px
+	padding: 55px 50px 55px 50px
+	background-color: $white
+	border-radius: $border-radius--main
+	box-shadow: 0 40px 96px rgba(0, 0, 0, 0.2)
+
+	+r($mobileL)
+		padding: 50px 25px 25px 25px
+
+	&__title
+		display: block
+		margin-bottom: 55px
+
+		+r($mobileL)
+			font-size: 16px
+			margin-bottom: 30px
+
+	&__form
+		display: flex
+		flex-direction: column
+
+	&__element-container
+		height: 60px
+		margin-bottom: 30px
+
+		&:last-child
+			margin-bottom: 0
+
+		.button
+			width: 100%
+
+		+r($mobileL)
+			margin-bottom: 20px
+
+		.select2-container
+			display: block

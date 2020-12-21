@@ -1,0 +1,1 @@
+{{ $paginator->render('components.layouts.includes._pagination') }}

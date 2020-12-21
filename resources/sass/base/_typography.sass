@@ -1,0 +1,204 @@
+.h1
+	margin: 0
+
+	font-weight: 600
+	font-size: 58px
+	line-height: $line-height-58
+	color: $black
+
+.h2
+	margin: 0
+
+	font-weight: 600
+	font-size: 44px
+	line-height: $line-height-46
+	color: $black
+
+.h3
+	margin: 0
+
+	font-weight: 650
+	font-size: 36px
+	line-height: $line-height-36
+	color: $black
+
+.h4
+	margin: 0
+
+	font-weight: 600
+	font-size: 28px
+	line-height: $line-height-32
+	color: $black
+
+	&_bold
+		font-weight: 650
+		line-height: $line-height-34
+
+.text
+	margin: 0
+	color: $black
+
+	&_slim
+		font-weight: 300
+
+	&_solid
+		font-weight: 500
+
+	&_massive
+		font-weight: 550
+
+	&_bold
+		font-weight: 700
+
+	&_semi-bold
+		font-weight: 600
+
+	&_12
+		font-size: 12px
+		line-height: $line-height-14
+
+	&_14m
+		font-size: 14px
+		line-height: $line-height-18
+
+	&_16
+		font-size: 16px
+		line-height: $line-height-24
+
+	&_17
+		font-size: 17px
+		line-height: $line-height-22
+
+	&_19
+		font-size: 19px
+		line-height: $line-height-24
+
+	&_20
+		font-size: 20px
+		line-height: $line-height-26
+	&_23
+		font-size: 23px
+		line-height: $line-height-30
+
+	&_24
+		font-size: 24px
+		line-height: $line-height-34
+
+	&_28
+		font-size: 28px
+		line-height: $line-height-32
+
+	&_36
+		font-size: 36px
+		line-height: $line-height-36
+
+	&_44
+		font-size: 44px
+		line-height: $line-height-46
+
+	&_58
+		font-size: 58px
+		line-height: $line-height-58
+
+	&_73
+		font-size: 73px
+		line-height: $line-height-73
+
+	&_96
+		font-size: 96px
+		line-height: $line-height-100
+
+
+	// Цвета текста
+	&_white
+		color: $white
+
+	&_black
+		color: $black
+
+	&_black-1
+		color: $black_1
+
+	&_black-3
+		color: $black_3
+
+	&_black-4
+		color: $black_4
+
+	&_red-1
+		color: $red_1
+
+	&_brown
+		color: $brown
+
+	&_brown-1
+		color: $brown_1
+
+	&_brown-2
+		color: $brown_2
+
+	&_beige
+		color: $beige
+
+	&_beige-4
+		color: $beige_4
+
+	&_white-f6
+		color: $white_f6
+
+	&_grey-light
+		color: $grey_light
+
+	&_blue-light
+		color: $blue
+
+	&_under-line
+		text-decoration: underline
+
+	// Шрифты
+	&_PT-font
+		font-family: $font-family-PT
+
+	// Разное
+	&_ul
+		text-decoration: underline
+
+	&_no-underline
+		text-decoration: none
+
+	&_nowrap
+		white-space: nowrap
+
+	&_center
+		text-align: center
+
+	&_upper
+		text-transform: uppercase
+
+
+.ls_10
+	letter-spacing: 0.1em
+
+.link
+	text-decoration: none
+
+	&_with-icon
+		display: flex
+		align-items: center
+
+		.text
+			padding-left: 12px
+
+			+r($laptop)
+				padding-left: 0
+
+	&_with-icon-baseline
+		align-items: baseline
+
+	&_underline
+		text-decoration: underline
+
+.link-underline-hover
+	text-decoration: none
+	&:hover
+		text-decoration: underline

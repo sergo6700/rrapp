@@ -1,0 +1,266 @@
+.popup-section
+	padding-top: 100px
+	padding-bottom: 100px
+
+.popup
+	position: relative
+	z-index: 400
+
+	display: none
+	width: 100%
+	padding: 55px 50px !important
+	max-width: 555px
+	min-width: 270px
+
+	background-color: $white
+	border-radius: $border-radius--main
+
+	+r($mobileL)
+		padding: 14px 25px 55px 25px !important
+
+	&__title
+		padding-bottom: 55px
+		color: #562212
+
+		+r($mobileL)
+			font-size: 16px
+			line-height: 18px
+			padding-bottom: 36px
+
+		&_registration
+			padding-bottom: 17px
+
+			+r($mobileL)
+				padding-bottom: 9px
+
+	.popup-close
+		position: absolute
+		top: 20px
+		right: 20px
+		width: 14px
+		height: 14px
+
+	.popup-submit-button, .popup-enter-button, .popup-register-button
+		width: 100%
+		margin-top: 38px
+
+	.popup-register-button_login
+		margin-top: 15px
+
+	input::-webkit-outer-spin-button,
+	input::-webkit-inner-spin-button
+		-webkit-appearance: none
+		margin: 0
+
+	input[type=number]
+		-moz-appearance: textfield
+
+	.recaptcha
+		position: relative
+		margin: 15px 0
+
+// for for bad-visible
+.special-color-2 .popup .popup-close svg path
+	fill: #ffffff
+
+// for for bad-visible
+
+
+.popup-form-authorization__link
+	+r($mobileL)
+		font-size: 16px
+
+.select2-container--default .select2-selection--single
+	min-height: 60px
+	display: flex !important
+	align-items: center
+	border: 1px solid $stroke !important
+	transition: border .3s
+
+	&:hover
+		border: 1px solid $beige !important
+
+	+r($mobileL)
+		min-height: 48px
+
+.select2-selection.select2-selection--single.select-error-border
+	border: 1px solid $red !important
+
+.select2-selection__arrow
+	top: 15% !important
+	right: 27px !important
+	b
+		display: inline-block
+		padding: 4px
+		border: solid black !important
+		border-width: 0 2px 2px 0 !important
+		// border-width: none
+		transform: rotate(45deg)
+
+.form-message
+	font-size: 19px
+	font-family: $font-family-PT
+	color: $black_4
+
+	+r($mobileL)
+		font-size: 16px
+
+.recaptcha_resgistration
+	margin-bottom: 22px
+
+.select2-container--open b
+	transform: rotate(225deg)
+
+.select2-container .select2-selection--single .select2-selection__rendered
+	font-size: 19px
+	font-family: $font-family-PT
+	padding-right: 45px !important
+	padding-left: 24px !important
+	+r($mobileL)
+		font-size: 16px
+
+.modal
+	max-width: 555px !important
+
+.blocker
+	z-index: 1000 !important
+
+.popup-form
+	padding-top: 21px
+
+.form-popup_small
+	+r($mobileL)
+		padding-top: 25px
+
+.form-element-container
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+	margin-bottom: 5px
+	height: 86px
+
+	+r($mobileL)
+		height: 75px
+
+	&:last-child
+		margin-bottom: 0
+
+	&_eye
+		position: relative
+
+	&_text-area
+		height: 130px
+
+	&_select
+		justify-content: flex-start
+		margin-bottom: 5px
+
+	label.error
+		font-size: 14px
+		color: $red
+		padding-left: 24px
+
+		+r($mobileM)
+			padding-left: 0
+
+	&__phone-prefix
+		position: relative
+
+		&:before
+			content: '+7'
+			position: absolute
+			top: 19px
+			left: 22px
+			font-size: 19px
+			font-family: "PT Sans", sans-serif
+
+		.input
+			padding-left: 44px
+
+.popup-select-error
+	display: none
+	font-size: 14px
+	color: $red
+	padding-left: 24px
+
+	+r($mobileM)
+		padding-left: 0
+
+.popup-error-show
+	display: block
+
+li.select2-results__option
+	font-size: 19px
+	font-family: $font-family-PT
+
+li.select2-results__option.select2-results__option--highlighted
+	background-color: $beige !important
+
+.hide-popup-content
+	display: none
+
+.ulogin-buttons-container
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
+	width: 100%
+	padding-bottom: 20px
+
+	+r($mobileM)
+		width: 220px
+
+	&_login
+		+r($mobileL)
+			padding-bottom: 0
+
+.popup-devider
+	display: flex
+	justify-content: space-between
+	align-items: center
+	width: 100%
+
+	&_login
+		padding-bottom: 22px
+
+	&__line
+		width: 45%
+		height: 1px
+		background-color: $stroke
+
+		+r($mobileL)
+			width: 42%
+
+		&_small
+			width: 33%
+
+			+r($mobileL)
+				width: 23%
+
+	&__text
+		font-size: 19px
+		line-height: 32px
+
+		+r($mobileL)
+			font-size: 16px
+			line-height: 21px
+
+.ulogin-container
+	display: flex
+	flex-direction: column
+	align-items: center
+	padding-bottom: 28px
+
+	&_login
+		padding-top: 30px
+		padding-bottom: 0
+
+.uLogin-title-container
+	text-align: center
+	padding-bottom: 20px
+
+.uLogin-title
+	line-height: 32px
+
+
+
+

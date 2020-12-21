@@ -1,0 +1,244 @@
+.calendar-section
+	padding-top: 100px
+	overflow: hidden
+	position: relative
+
+	+r($mobileL)
+		padding: 0
+
+	.section-title
+		+r($mobileL)
+			padding-bottom: 25px
+			// padding-left: 25px
+			font-size: 18px
+			line-height: 23px
+
+	.button_mobile
+		+r($max-laptop)
+			display: none
+		+r($laptop)
+			display: block
+		+r($mobileL)
+			margin-top: 25px
+
+.time-line
+	padding-bottom: 95px !important
+
+	+r($mobileL)
+		padding-bottom: 0 !important
+
+	&__list
+		display: flex
+		width: 100vw
+		padding-top: 150px
+
+		font-size: 0
+		transition: all 1s
+
+		.swiper-slide
+			width: auto !important
+
+		+r($mobileL)
+			padding-top: 80px
+
+	&__list-item
+		position: relative
+		list-style-type: none
+		border-top: 4px solid $red_1
+
+		+r($mobileL)
+			border-top: 3px solid $red_1
+
+		&:first-child
+			padding-left: calc((100vw - 1440px) / 2 + 120px)
+
+			+r($min-desktop)
+				padding-left: 120px
+
+			+r($max-laptop)
+				padding-left: 20px
+
+			+r($mobileL)
+				padding-left: 0
+
+			.calendar-date
+				left: calc((100vw - 1440px) / 2 + 150px)
+
+				+r($min-desktop)
+					left: 155px
+
+				+r($max-laptop)
+					left: 55px
+
+				+r($mobileL)
+					left: 30px
+
+.day-content
+	position: relative
+	display: table
+	border-spacing: 30px
+
+	+r($mobileL)
+		border-spacing: 25px 10px
+
+	&::before
+		content: ''
+		position: absolute
+		top: -15px
+		display: block
+		width: 25px
+		height: 25px
+		background-color: $red_1
+		border-radius: 50%
+
+	+r($mobileL)
+		&:before
+			top: -7px
+			width: 11px
+			height: 11px
+
+	&__row
+		display: table-row
+
+.day-content-card
+	position: relative
+	z-index: 1
+	display: table-cell
+	min-width: 360px
+	padding: 28px
+	background-color: #fbfbfb
+	border-radius: $border-radius--main
+
+	&::before
+		content: ''
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		z-index: -1
+		background-color: $white
+		border-radius: $border-radius--main
+
+	&:hover
+		box-shadow: 0 40px 96px 2px $grey_light
+		&::before
+			transform: rotate(2.5deg)
+
+	+r($laptop)
+		min-width: auto
+		padding: 23px 16px 23px 16px
+
+	+r($mobileL)
+		padding: 23px 8px 26px 13px
+
+	&__title
+		max-width: 252px
+		padding-bottom: 18px
+
+		+r($laptop)
+			font-size: 18px
+			padding-bottom: 10px
+
+		+r($mobileL)
+			font-size: 14px
+
+	&__small-title
+		padding-bottom: 4px
+		font-size: 14px
+
+		+r($mobileL)
+			font-size: 12px
+
+	&__description
+		display: flex
+
+	&__adress-text, &__organizer-text
+		font-size: 14px
+		+r($laptop)
+			font-size: 12px
+
+	a:hover, a:focus
+		color: #F17757
+		outline: none
+
+
+.day-content-card__description-element
+	max-width: 135px
+	margin-right: 32px
+
+	&:last-child
+		margin-right: 0
+
+	+r($laptop)
+		margin-right: 16px
+
+	+r($mobileL)
+		width: 50%
+		max-width: 108px
+		margin-right: 5px
+
+.calendar-date
+	position: absolute
+	top: -130px
+	left: 33px
+	min-height: 84px
+	min-width: 141px
+	padding: 10px 13px 11px 0
+
+	+r($laptop)
+		min-width: auto
+
+	+r($mobileL)
+		padding: 2px 5px
+		min-height: 37px
+		top: -60px
+		left: 20px
+
+	&_active
+		top: -140px
+		padding: 10px 13px 11px 15px
+		background-color: $red_1
+		.text
+			color: $white
+
+		+r($mobileL)
+			padding: 2px 5px
+			min-height: 37px
+			top: -70px
+			left: 25px
+
+	&__number
+		+r($laptop)
+			font-size: 30px
+
+		+r($mobileL)
+			font-size: 18px
+			line-height: 23px
+
+	&__week-day
+		+r($laptop)
+			font-size: 20px
+
+		+r($mobileL)
+			font-size: 14px
+			line-height: 18px
+
+	.text
+		display: block
+
+.calendar-line
+	position: absolute
+	top: 396px
+	width: 100%
+	height: 4px
+
+	background-color: $red_1
+
+	+r($laptopS)
+		top: 442px
+
+	+r($mobileL)
+		height: 3px
+		top: 178px
+

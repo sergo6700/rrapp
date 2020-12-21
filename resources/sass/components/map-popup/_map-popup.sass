@@ -1,0 +1,47 @@
+.map-popup
+	position: relative
+	z-index: 1
+	width: 450px
+	padding: 30px
+
+	background-color: #fbfbfb
+	border-radius: $border-radius--main
+	transition: width .3s
+
+	&::before
+		content: ''
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		z-index: -1
+
+		background-color: $white
+		border-radius: $border-radius--main
+
+	&:hover
+		box-shadow: 0 40px 96px 2px $grey_light
+		&::before
+			transform: rotate(2.5deg)
+
+	+r($mobileL)
+		padding: 20px
+		width: 270px
+
+	&__text
+		display: block
+		padding-left: 30px
+		padding-top: 5px
+
+	& a
+		cursor: default
+
+.map-popup-wrapper
+	position: absolute
+	top: 18%
+	left: 20%
+	z-index: 150
+
+	+r($mobileL)
+		display: none

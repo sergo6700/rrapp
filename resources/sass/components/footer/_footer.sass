@@ -1,0 +1,253 @@
+.footer
+	margin: 0 auto
+	padding-top: 43px
+	padding-bottom: 72px
+	background-color: $white
+
+	.menu-list, .footer-logo
+		margin-right: 10px
+
+		+r($max-laptop)
+			margin-right: 0
+
+		&:last-child
+			margin-right: 0
+
+	+r($mobileL)
+		max-width: 550px
+		padding-bottom: 50px
+
+	+r($mobileM)
+		max-width: 360px
+
+	+r($mobileS)
+		max-width: 320px
+
+.footer-logo
+	+r($max-laptop)
+		width: 100%
+		padding-bottom: 25px
+
+	+r($max-laptop)
+		display: flex
+		justify-content: space-between
+		align-items: center
+		max-width: 650px
+
+	+r($mobileL)
+		max-width: 300px
+
+	&__link-group
+		display: flex
+		justify-content: space-between
+		margin-top: 8px
+		margin-left: -5px
+
+		&:first-child
+			margin-left: 0
+
+		.link
+			margin-left: 5px
+
+		+r($max-laptop)
+			margin-top: 0
+
+	&__link1
+		width: 132px
+		height: 30px
+		margin-left: -8px
+		background-image: url('/img/pictures/footer-logo-1.png')
+
+		+r($mobileL)
+			width: 93px
+			height: 21px
+			background-image: url('/img/pictures/footer-logo-1-short.png')
+			order: 1
+
+	&__link2
+		width: 53px
+		height: 56px
+		background-image: url('/img/pictures/footer-logo-2.png')
+
+		+r($mobileL)
+			width: 25px
+			height: 28px
+			background-image: url('/img/pictures/footer-logo-2-short.png')
+
+	&__link3
+		width: 51px
+		height: 56px
+		background-image: url('/img/pictures/footer-logo-3.png')
+
+		+r($mobileL)
+			width: 25px
+			height: 28px
+			background-image: url('/img/pictures/footer-logo-3-short.png')
+
+	.link
+		display: block
+		background-repeat: no-repeat
+		transition: all .3s ease
+		&:hover
+			opacity: 0.7
+
+
+.footer-content
+	display: flex
+	justify-content: space-between
+	padding-bottom: 66px
+
+	+r($max-laptop)
+		flex-wrap: wrap
+		justify-content: flex-start
+
+	+r($mobileL)
+		flex-direction: column
+		padding-bottom: 20px
+
+
+
+.menu-list__item
+	padding-bottom: 10px
+	&_bottom
+		padding-bottom: 20px
+	.link
+		transition: color .3s
+		&:hover, &:focus
+			color: $red_1
+			outline: none
+
+			svg path
+				fill: $red_1
+				transition: fill .3s
+		&.active
+			color: $red_1
+
+		+r($mobileL)
+			font-size: 16px
+			line-height: 20px
+			text-decoration: underline
+
+.menu-list__item
+	.link
+		svg
+			+r($mobileL)
+				width: 25px
+				height: 25px
+
+.links-socials
+	display: flex
+	align-items: center
+
+	+r($mobileL)
+		display: flex
+		justify-content: center
+		padding-top: 23px
+		border-top: 1px solid $black5
+
+	.link-social
+		display: inline-block
+		margin-right: 22px
+
+		&:last-child
+			margin-right: 0
+
+		+r($mobileL)
+			margin-right: 34px
+			font-size: 28px
+
+.copyright-block
+	padding-top: 30px
+	display: flex
+	justify-content: space-between
+	border-top: 0.5px solid #d1d3d4
+
+	&__created-by
+		span, a
+			display: inline-block
+
+	+r($mobileL)
+		flex-direction: column
+		align-items: center
+		padding-top: 20px
+
+.menu-list
+
+	&_message
+		padding-top: 13px
+		display: none
+		.button
+			width: 100%
+
+	+r($max-laptop)
+		margin-bottom: 10px
+		width: 40%
+
+	+r($mobileL)
+		width: 100%
+		margin-right: 0
+
+	&_message
+		+r($mobileL)
+			display: flex
+			justify-content: center
+
+
+.footer-logo-icon
+	+r($mobileL)
+		width: 102px
+		height: 46px
+
+.menu-list_mobile-border
+	+r($mobileL)
+		padding-top: 20px
+		padding-bottom: 20px
+		border-bottom: 1px solid $black5
+
+.footer-content
+	+r($mobileL)
+		.menu-list_calendar
+			order: 1
+			margin-bottom: 0
+
+		.menu-list_docs
+			order: 2
+			padding-top: 0
+
+		.menu-list_adress
+			order: 3
+			.menu-list__item:last-child
+				display: none
+
+		.menu-list_contacts
+			order: 4
+			padding-bottom: 0
+			margin-bottom: 0
+			border-color: $tr
+
+.copyright-block
+	.copyright-link
+		font-size: 19px
+
+	+r($mobileL)
+		.link
+			text-align: center
+
+		.text_17
+			font-size: 14px
+			line-height: 17px
+
+		&__created-by
+			padding-top: 13px
+
+		.copyright-text
+			display: none
+
+
+
+
+
+
+
+
+

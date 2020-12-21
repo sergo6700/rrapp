@@ -1,0 +1,28 @@
+.select2-dropdown
+  margin-top: 20px
+.select2-container--open .select2-dropdown--below
+    position: relative
+    border: 0
+    border-top: 1px solid #aaa
+    border-radius: 5px
+    border-top-left-radius: 5px
+    border-top-right-radius: 5px
+    &::after
+      position: absolute
+      left: 24px
+      top: -7px
+      content: ''
+      width: 12px
+      height: 12px
+      background: white
+      transform: rotate(135deg)
+      border-left: 1px solid #C9CCD4
+      border-bottom: 1px solid #C9CCD4
+      z-index: -1
+.select2-results
+  border: 1px solid #aaa
+  border-top: 0
+  border-radius: 5px
+  overflow: hidden  
+li.select2-results__option
+    padding: 11px 24px

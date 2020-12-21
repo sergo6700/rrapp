@@ -1,0 +1,137 @@
+.activity-card
+	display: flex
+	// justify-content: space-between
+	width: 100%
+	padding: 40px 67px 40px 42px
+	background-color: $white
+	border-radius: $border-radius--main
+	margin-bottom: 5px
+	&:last-child
+		margin-bottom: 0
+	+r($laptop)
+		flex-direction: column
+		padding-top: 20px
+		padding-right: 15px
+		padding-bottom: 25px
+		padding-left: 15px
+	&_with-indent
+		margin-bottom: 40px
+	&__date
+		max-width: 100px
+		margin-right: 40px
+		.activity-card__day
+			&:nth-child(2)
+				display: block
+				margin-top: -10px
+				+r($laptop)
+					display: none
+		.date_for_phone
+			display: none
+		+r($laptop)
+			display: flex
+			align-items: baseline
+			padding-bottom: 15px
+			.text
+				font-size: 32px
+				line-height: $line-height-34
+			.date_for_phone
+				display: inline-block
+				& + .date_for_phone
+					padding-left: 6px
+					font-size: 26px
+					line-height: 103.2%
+			.activity-card__day, .activity-card__mouth
+				display: none
+		.text:last-child
+			+r($mobileL)
+				padding-left: 6px
+	&_past-activity
+		.activity-card__date .text
+			color: $black5
+	&__content
+		max-width: 889px
+		width: 100%
+		word-break: break-word
+	&__description
+		padding-bottom: 37px
+		+r($laptop)
+			padding-bottom: 15px
+		.text
+			+r($laptop)
+				font-size: 14px
+				line-height: $line-height-16
+	&__description-title
+		margin-bottom: 15px
+		+r($laptop)
+			margin-bottom: 7px
+			font-size: 16px
+			line-height: 17px
+		a
+			text-decoration: none
+			&:hover, &:focus
+				color: $red_1
+				outline: none
+
+	.link
+		text-decoration: none
+		&:hover, &:focus
+			outline: none
+			& span
+				color: $red_1
+	&__contacts
+		display: flex
+		+r($laptop)
+			flex-direction: column
+	&__link-icon
+		+r($laptop)
+			display: none
+	&__contacts-element
+		display: flex
+		flex-direction: column
+		width: 45%
+		margin-right: 47px
+		+r($laptop)
+			padding-bottom: 14px
+			width: 100%
+			&:last-child
+				padding-bottom: 0
+		.link_with-icon
+			padding-bottom: 4px
+			max-width: fit-content
+	&__contacts-title
+		+r($laptop)
+			font-size: 14px
+			line-height: $line-height-18
+	&_no-date
+		justify-content: flex-end
+		padding-left: 180px
+		+r($laptop)
+			padding-left: 15px
+	& + .activity-card:not(.activity-card_no-date)
+		margin-top: 40px
+	.button_cancel-activity
+		+r($laptop)
+			margin-top: 15px
+
+.activities-card-container
+	padding-bottom: 40px
+	+r($laptop)
+		padding-bottom: 25px
+	&:last-child
+		padding-bottom: 0
+
+.activity-card__adress-text
+	display: inline-block
+	padding-left: 27px
+	+r($laptop)
+		padding-left: 0
+		font-size: 14px
+		line-height: $line-height-18
+
+.activity-card__organizer-text
+	display: inline-block
+	padding-left: 32px
+	+r($laptop)
+		padding-left: 0
+		font-size: 14px
+		line-height: $line-height-18

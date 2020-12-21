@@ -1,0 +1,112 @@
+.personal-info-slide
+	border-color: $white
+
+.personal-info-form
+	display: flex
+	flex-direction: column
+
+	padding: 20px 40px 50px 40px
+	background-color: $white
+	border-radius: $border-radius--main
+
+	+r($laptop)
+		padding: 0
+
+		background-color: transparent
+
+	&__content
+		display: flex
+		flex-direction: column
+		padding-bottom: 30px
+
+		+r($laptop)
+			flex-direction: column
+
+		+r($mobileL)
+			padding-bottom: 0
+
+	&__section
+		display: flex
+		justify-content: space-between
+		width: 100%
+
+		+r($laptop)
+			width: auto
+
+		+r($mobileL)
+			justify-content: center
+			flex-direction: column
+
+		&_first
+			margin-bottom: 35px
+
+			+r($mobileL)
+				margin-bottom: 0
+
+	&__section-column
+		display: flex
+		flex-direction: column
+		width: 48%
+
+		+r($mobileL)
+			width: 100%
+
+	&__element
+		padding-bottom: 30px
+
+		&:last-child
+			padding-bottom: 0
+
+			+r($laptop)
+				padding-bottom: 30px
+
+		label.error
+			padding-left: 24px
+
+			font-size: 14px
+			color: #ED5338
+
+
+	&__label
+		display: block
+		margin-bottom: 10px
+
+		+r($mobileL)
+			font-size: 16px
+
+	&__text-block
+		margin-bottom: 30px
+
+	.select2
+		width: 100%
+
+	input[type=number]
+		-moz-appearance: textfield
+
+	input[type=number]::-webkit-inner-spin-button,
+	input[type=number]::-webkit-outer-spin-button
+		-webkit-appearance: none
+		margin: 0
+
+	+r($laptop)
+		.select2-container--default .select2-selection--single
+			background-color: transparent
+
+		.input
+			background-color: transparent
+
+.hide
+	display: none
+
+.show
+	display: block
+
+.personal-info-form__text-title
+	+r($mobileL)
+		font-size: 16px
+
+.personal-info-form__text
+	+r($mobileL)
+		font-size: 14px
+
+

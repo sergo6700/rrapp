@@ -1,0 +1,42 @@
+.pagination
+	display: flex
+	margin-top: 30px
+	justify-content: center
+	align-items: center
+	+r($mobileL)
+		padding-left: 20px
+		padding-right: 20px
+	+r($mobileM)
+		padding-left: 0px
+		padding-right: 0px
+
+	&__list
+		display: flex
+		justify-content: center
+		align-items: center
+
+		//max-width: 317px
+
+		font-size: 19px
+		+r($laptopS)
+			flex-wrap: wrap
+
+	&-arrow
+		color: $beige
+
+		&:focus, &:active
+			outline: none
+			& svg path
+				fill: $red_1
+
+		&_left
+			margin-right: 40px
+
+			+r($mobileM)
+				margin-right: 20px
+
+		&_right
+			margin-left: 40px
+
+			+r($mobileM)
+				margin-left: 20px

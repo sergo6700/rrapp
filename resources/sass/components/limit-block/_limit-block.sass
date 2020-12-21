@@ -1,0 +1,61 @@
+
+.limit-block
+	position: relative
+	z-index: 100
+	width: 100%
+	padding: 50px 70px 55px 70px
+
+	border-radius: $border-radius--main
+	transition: width .3s
+
+	+r($max-laptop)
+		padding: 25px 21px
+
+
+	&__content h4
+		color: $black
+		+r($laptopS)
+			margin-bottom: 25px
+			font-size: 16px
+			line-height: 115%
+
+	&::before
+		content: ''
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		z-index: -1
+
+		background-color: $white
+		border-radius: $border-radius--main
+
+	&:hover
+		box-shadow: 0 40px 96px 2px $grey_light
+		&::before
+			transform: rotate(2.5deg)
+
+	&__buttons-container
+		margin-top: 37px
+		display: flex
+
+		+r($max-laptop)
+			margin-top: 12px
+
+		+r($mobileL)
+			flex-direction: column
+
+		.button
+			min-width: 200px
+			margin-right: 30px
+			margin-bottom: 15px
+			&:last-child
+				margin-right: 0
+
+			+r($mobileL)
+				padding-top: 10px
+				padding-bottom: 10px
+				margin-right: 0
+
+

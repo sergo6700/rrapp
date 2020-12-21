@@ -1,0 +1,144 @@
+.actual-section
+	.actual-slider-container
+		position: relative
+		padding: 0 53px
+
+		+r($max-laptop)
+			padding: 0 50px
+
+		+r($mobileL)
+			padding: 0 25px
+
+	.section-title
+		+r($mobileL)
+			padding-bottom: 10px
+
+			font-size: 18px
+			line-height: $line-height-22
+
+.actual-slider-wrapper
+	overflow: hidden
+	margin-bottom: 75px
+
+	+r($mobileL)
+		margin-bottom: 49px
+
+.actual-slider
+	width: 555px
+	margin: 0 auto
+
+	+r($edge-desktop)
+		width: calc(100vw/2.295 - 2*53px/2.295 - 2*30px/2.295) // 100vw + paddings + margins
+
+	+r($max-laptop)
+		width: 100%
+
+	&__link
+		display: flex
+		justify-content: center
+		flex-direction: column
+
+		height: 390px
+
+		+r($edge-desktop)
+			height: calc(100vw/3.267 - 2*53px/3.267 - 2*30px/3.267)
+
+		+r($max-laptop)
+			height: auto
+
+		+r($iphone6)
+			flex-direction: row
+
+		img
+			width: 555px
+			border-radius: 6px
+			transition: width 300ms
+
+			+r($edge-desktop)
+				width: calc(100vw/2.295 - 2*53px/2.295 - 2*30px/2.295)
+
+			+r($max-laptop)
+				width: 270px
+
+			+r($iphone6)
+				width: 100%
+
+	.swiper-slide
+		+r($max-laptop)
+			max-width: 270px
+
+		+r($iphone6)
+			max-width: 100%
+
+	.swiper-slide:not(.swiper-slide-next) picture
+		align-self: flex-end
+
+	.swiper-slide.swiper-slide-next picture
+		align-self: flex-start
+
+	//.swiper-slide img
+	.swiper-slide:not(.swiper-slide-active) img
+		width: 360px
+		height: auto
+
+		+r($edge-desktop)
+			width: calc(100vw/3.539 - 2*53px/3.539 - 2*30px/3.539)
+
+		+r($max-laptop)
+			width: 270px
+
+		+r($mobileM)
+			width: 100%
+
+	&__btn
+		position: absolute
+		top: calc(50% - 70px)
+
+		width: 52px
+		height: 140px
+
+		font-size: 0
+		outline: none
+
+		+r($max-laptop)
+			display: none
+
+		&--prev,
+		&--next
+			&::after
+				content: url(/img/icons/arrow-right-icon.svg)
+
+		&--prev
+			left: 0
+			transform: rotate(180deg)
+
+		&--next
+			right: 0
+
+	&__pagination.swiper-pagination-bullets
+		position: absolute
+		bottom: -45px
+
+		display: flex
+		justify-content: center
+		outline: none
+
+		+r($mobileL)
+			bottom: -29px
+
+		.swiper-pagination-bullet
+			width: 15px
+			height: 15px
+			margin: 0 10px
+			background-color: $black5
+			outline: none
+
+			+r($mobileL)
+				width: 9px
+				height: 9px
+				margin: 0 7.5px
+
+			&.swiper-pagination-bullet-active
+				background-color: $black_1
+
+
